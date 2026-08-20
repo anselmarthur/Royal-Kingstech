@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROYAL KINSTECH LIMITED COMPANY | Your Best Interest</title>
+  <meta name="description"
+    content="ROYAL KINSTECH LIMITED COMPANY - Ghana's premier conglomerate in Civil Engineering, Sustainable Urban Green Towers, Commercial Solar & Energy Storage, Real Estate, Structural Steel, IT Hardware & Building Materials.">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Leaflet CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Custom Palette & Responsive Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       1. GLOBAL STICKY HEADER & DYNAMIC TOP UTILITY BAR
+       ========================================================================== -->
+  <header class="header-sticky" id="main-header">
+
+    <!-- Dynamic Top Utility Bar (Desktop Only - Gold #D4AF37, Pitch Black Text) -->
+    <div class="top-utility-bar" id="top-utility-bar">
+      <div class="container utility-container">
+        <div class="utility-left">
+          <a href="tel:0542842128" class="utility-item">
+            <i class="fa-solid fa-phone"></i> 0542842128 | 0276002207
+          </a>
+          <a href="mailto:royalkinstechlimited@gmail.com" class="utility-item">
+            <i class="fa-solid fa-envelope"></i> royalkinstechlimited@gmail.com
+          </a>
+        </div>
+        <div class="utility-right">
+          <span class="utility-item">
+            <i class="fa-solid fa-location-dot"></i> Ablekuma, Accra
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Sticky Navigation Bar -->
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo-link" aria-label="Royal Kinstech Homepage">
+        <img src="assets/images/royal_kinstech_logo.png" alt="Royal Kinstech Limited Logo" class="main-company-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#vision" class="nav-link">Vision & Mission</a>
+        <a href="#values" class="nav-link">Core Values</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#services-construction-solar" class="nav-link">Construction & Solar</a>
+        <a href="#real-estate" class="nav-link">Real Estate</a>
+        <a href="#it-tech" class="nav-link">IT & Tech</a>
+        <a href="#materials-goods" class="nav-link">Materials</a>
+        <a href="#news-events" class="nav-link">News & Events</a>
+        <a href="#contact" class="nav-cta-btn">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-hamburger" id="mobile-menu-toggle" aria-label="Open mobile menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <img src="assets/images/royal_kinstech_logo.png" alt="Royal Kinstech Limited Logo"
+        style="height: 48px; width: auto;">
+      <button class="drawer-close-btn" id="mobile-menu-close" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#hero" class="drawer-nav-link"><i class="fa-solid fa-house gold-text"></i> Home</a></li>
+      <li><a href="#about" class="drawer-nav-link"><i class="fa-solid fa-building-user gold-text"></i> About Us</a></li>
+      <li><a href="#vision" class="drawer-nav-link"><i class="fa-solid fa-eye gold-text"></i> Vision & Mission</a></li>
+      <li><a href="#values" class="drawer-nav-link"><i class="fa-solid fa-gem gold-text"></i> Core Values</a></li>
+      <li><a href="#why-us" class="drawer-nav-link"><i class="fa-solid fa-award gold-text"></i> Why Choose Us</a></li>
+      <li><a href="#services-construction-solar" class="drawer-nav-link"><i
+            class="fa-solid fa-helmet-safety gold-text"></i> Construction & Solar</a></li>
+      <li><a href="#real-estate" class="drawer-nav-link"><i class="fa-solid fa-city gold-text"></i> Real Estate</a></li>
+      <li><a href="#it-tech" class="drawer-nav-link"><i class="fa-solid fa-microchip gold-text"></i> IT & Tech</a></li>
+      <li><a href="#materials-goods" class="drawer-nav-link"><i class="fa-solid fa-cubes-stacked gold-text"></i>
+          Building Materials</a></li>
+      <li><a href="#news-events" class="drawer-nav-link"><i class="fa-solid fa-newspaper gold-text"></i> News &
+          Events</a></li>
+      <li><a href="#contact" class="drawer-nav-link"><i class="fa-solid fa-envelope gold-text"></i> Contact Us</a></li>
+    </ul>
+    <div style="text-align: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+      <p style="font-size: 0.85rem; color: var(--c-gold); font-weight: 700;">“Your Best Interest”</p>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- ==========================================================================
+       2. FLOATING SOCIAL MEDIA BAR (FIXED RIGHT-SIDE)
+       ========================================================================== -->
+  <aside class="floating-social-bar" id="floating-social-bar" aria-label="Social Media Links">
+    <a href="https://wa.me/233542842128" target="_blank" rel="noopener noreferrer" class="social-icon-btn whatsapp"
+      aria-label="WhatsApp Us">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram"
+      aria-label="Follow us on Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn facebook"
+      aria-label="Follow us on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </aside>
+
+  <!-- ==========================================================================
+       3. HERO SECTION (SUSTAINABLE URBAN GREEN TOWER & INFRASTRUCTURE)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-grid-pattern"></div>
+
+    <div class="container hero-content-wrapper">
+      <img src="assets/images/royal_kinstech_logo.png" alt="Royal Kinstech Limited Official Logo"
+        class="hero-logo-large">
+
+      <div class="gold-badge" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-leaf"></i> Sustainable Urban Green Architecture & Clean Energy
+      </div>
+
+      <h1 class="hero-title">ROYAL KINSTECH LIMITED COMPANY</h1>
+      <p class="hero-motto">“Your Best Interest”</p>
+
+      <!-- Floating Quick-Info Bar -->
+      <div class="floating-info-bar">
+        <div class="info-item">
+          <div class="info-icon-wrapper">
+            <i class="fa-solid fa-building-flag"></i>
+          </div>
+          <div>
+            <div class="info-label">Headquarters Location</div>
+            <div class="info-val">Ablekuma, Accra, Ghana</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon-wrapper">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div>
+            <div class="info-label">Digital Address & Coordinates</div>
+            <div class="info-val">GC-192-0746 | 5°36'14.2"N 0°20'28.2"W</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. ABOUT US SECTION
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left Container (60%) -->
+        <div class="about-left">
+          <div class="gold-badge">
+            <i class="fa-solid fa-shield-halved"></i> Corporate Overview
+          </div>
+          <h2 class="about-heading">About <span class="blue-text">Us</span></h2>
+
+          <p class="about-paragraph">
+            <strong>ROYAL KINSTECH LIMITED COMPANY</strong> is Ghana's premier industrial conglomerate specializing in
+            large-scale civil engineering, eco-conscious urban green skyscraper developments, commercial solar PV
+            systems, structural steel fabrication, enterprise IT hardware, and bulk building material distribution.
+          </p>
+
+          <p class="about-paragraph">
+            Guided by our unwavering corporate philosophy—<em>“Your Best Interest”</em>—we engineer resilient,
+            energy-efficient building structures and sustainable urban infrastructure that drive long-term economic
+            prosperity across West Africa.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-stat-card">
+              <div class="stat-num">100%</div>
+              <div class="stat-desc">Structural Safety & Quality Compliance</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="stat-num">6+</div>
+              <div class="stat-desc">Core Industrial Sectors Covered</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Container (40%) -->
+        <div class="about-right">
+          <div class="collage-container">
+            <img src="assets/images/solar_array_crystalline.png"
+              alt="Crystalline Photovoltaic Array - Royal Kinstech Commercial Solar" class="collage-img">
+          </div>
+
+          <!-- Dedicated Sector Badge Grid -->
+          <div class="sector-badge-grid">
+            <div class="sector-badge-card">
+              <span class="sector-icon">🏗️</span>
+              <span class="sector-title">Construction</span>
+            </div>
+            <div class="sector-badge-card">
+              <span class="sector-icon">🏢</span>
+              <span class="sector-title">Real Estate</span>
+            </div>
+            <div class="sector-badge-card">
+              <span class="sector-icon">☀️</span>
+              <span class="sector-title">Solar & Clean Energy</span>
+            </div>
+            <div class="sector-badge-card">
+              <span class="sector-icon">🏭</span>
+              <span class="sector-title">Steel</span>
+            </div>
+            <div class="sector-badge-card">
+              <span class="sector-icon">💻</span>
+              <span class="sector-title">Technology</span>
+            </div>
+            <div class="sector-badge-card">
+              <span class="sector-icon">🧱</span>
+              <span class="sector-title">Materials</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. VISION, MISSION & MOTTO SECTION
+       ========================================================================== -->
+  <section class="vision-mission-section" id="vision">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="gold-badge"><i class="fa-solid fa-compass"></i> Guiding Principles</div>
+        <h2 class="section-title">Vision, Mission <span class="blue-text">& Motto</span></h2>
+        <p class="section-desc">Pioneering eco-friendly urban green tower architecture and clean energy engineering
+          excellence.</p>
+      </div>
+
+      <div class="vmm-stack">
+
+        <!-- Top Block (Vision) -->
+        <div class="vmm-card">
+          <div class="vmm-content">
+            <div class="vmm-title-tag">Our Vision</div>
+            <h3 class="vmm-title blue-text">Urban Green Tower Architecture</h3>
+            <p class="vmm-text">
+              To lead West Africa's infrastructure transformation through eco-conscious urban green skyscrapers,
+              renewable commercial solar energy grids, and resilient civil infrastructure built to endure for
+              generations.
+            </p>
+          </div>
+          <div class="vmm-visual">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+              alt="Urban Green Tower Building Architecture" class="vmm-img">
+          </div>
+        </div>
+
+        <!-- Middle Block (Mission) -->
+        <div class="vmm-card reverse">
+          <div class="vmm-content">
+            <div class="vmm-title-tag">Our Mission</div>
+            <h3 class="vmm-title blue-text">Engineering Excellence & Reliability</h3>
+            <p class="vmm-text">
+              To deliver superior civil construction, high-yield clean energy systems, real estate asset management, and
+              enterprise technology by integrating certified materials and transparent execution—consistently maximizing
+              value for our clients.
+            </p>
+          </div>
+          <div class="vmm-visual">
+            <img src="assets/images/solar_rooftop_commercial.png"
+              alt="Commercial Rooftop Solar Panel System Installation" class="vmm-img">
+          </div>
+        </div>
+
+        <!-- Bottom Block (Motto Banner) -->
+        <div class="motto-banner">
+          <div class="motto-banner-content">
+            <div class="gold-badge" style="margin-bottom: 1rem;"><i class="fa-solid fa-handshake"></i> Corporate
+              Philosophy</div>
+            <h2 class="motto-heading-large">“Your Best Interest”</h2>
+            <p class="motto-subtext">
+              Every project planned, green tower constructed, solar grid deployed, and material delivered is executed
+              with absolute fidelity to your success.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. CORE VALUES SECTION
+       ========================================================================== -->
+  <section class="values-section" id="values">
+    <div class="blueprint-bg"></div>
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="gold-badge"><i class="fa-solid fa-gem"></i> Corporate Pillars</div>
+        <h2 class="section-title">Our Core <span class="blue-text">Values</span></h2>
+        <p class="section-desc">The principles that govern our corporate culture, engineering standards, and client
+          trust.</p>
+      </div>
+
+      <!-- 2 Column x 3 Row Grid -->
+      <div class="values-grid">
+
+        <!-- 1. Integrity -->
+        <div class="value-card">
+          <div class="value-icon-box">🛡️</div>
+          <div class="value-content">
+            <h3 class="blue-text">Integrity</h3>
+            <p>Uncompromising honesty, transparent land titles, and ethical conduct across all business operations.</p>
+          </div>
+        </div>
+
+        <!-- 2. Innovation -->
+        <div class="value-card">
+          <div class="value-icon-box">💡</div>
+          <div class="value-content">
+            <h3 class="blue-text">Innovation</h3>
+            <p>Pioneering modern building methods, green tower vertical gardens, and high-efficiency solar energy
+              technology.</p>
+          </div>
+        </div>
+
+        <!-- 3. Quality -->
+        <div class="value-card">
+          <div class="value-icon-box">📑</div>
+          <div class="value-content">
+            <h3 class="blue-text">Quality</h3>
+            <p>Full compliance with international structural codes, certified high-grade steel, and rigorous quality
+              control.</p>
+          </div>
+        </div>
+
+        <!-- 4. Sustainability -->
+        <div class="value-card">
+          <div class="value-icon-box">🍃</div>
+          <div class="value-content">
+            <h3 class="blue-text">Sustainability</h3>
+            <p>Advancing green skyscraper architecture, renewable solar power, and eco-friendly urban masterplans.</p>
+          </div>
+        </div>
+
+        <!-- 5. Customer Focus -->
+        <div class="value-card">
+          <div class="value-icon-box">👥</div>
+          <div class="value-content">
+            <h3 class="blue-text">Customer Focus</h3>
+            <p>Aligning every engineering decision with client priorities, budget optimization, and timely project
+              delivery.</p>
+          </div>
+        </div>
+
+        <!-- 6. Collaboration -->
+        <div class="value-card">
+          <div class="value-icon-box">🌐</div>
+          <div class="value-content">
+            <h3 class="blue-text">Collaboration</h3>
+            <p>Uniting municipal authorities, technology partners, and local communities for long-term industrial
+              growth.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. WHY CHOOSE US SECTION
+       ========================================================================== -->
+  <section class="why-section" id="why-us">
+    <div class="container">
+      <div class="why-grid">
+
+        <!-- Left Side: Value Proposition List -->
+        <div>
+          <div class="gold-badge"><i class="fa-solid fa-circle-check"></i> Competitive Advantage</div>
+          <h2 class="about-heading" style="margin-top: 0.5rem;">Why Choose <span class="blue-text">Royal Kinstech</span>
+          </h2>
+          <p style="color: var(--text-secondary); margin-top: 1rem;">
+            Single-source technical accountability across civil engineering, commercial solar energy, and property
+            developments.
+          </p>
+
+          <ul class="why-list">
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Experienced Multidisciplinary Engineering Team</span>
+            </li>
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Rigorous Quality Assurance & Safety Protocols</span>
+            </li>
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Urban Green Building & Sustainability Commitment</span>
+            </li>
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Customized Infrastructure & Real Estate Solutions</span>
+            </li>
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Wide Range of Certified Building Products & Steel</span>
+            </li>
+            <li class="why-list-item">
+              <i class="fa-solid fa-star why-marker"></i>
+              <span class="why-item-title">Transparent & Competitive Project Pricing</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side: 3 Stacked Feature Visual Cards -->
+        <div class="why-visual-stack">
+
+          <div class="why-feature-card">
+            <img src="assets/images/solar_construction.png" alt="Engineers reviewing structural plans"
+              class="why-feature-img">
+            <div class="why-feature-overlay">
+              <span>Engineers Reviewing Structural Steel Blueprint Plans</span>
+              <i class="fa-solid fa-helmet-safety blue-text"></i>
+            </div>
+          </div>
+
+          <div class="why-feature-card">
+            <img src="assets/images/solar_rooftop_commercial.png"
+              alt="Commercial Rooftop Solar Panel System Installation" class="why-feature-img">
+            <div class="why-feature-overlay">
+              <span>Commercial Rooftop Solar Array Installation</span>
+              <i class="fa-solid fa-sun blue-text"></i>
+            </div>
+          </div>
+
+          <div class="why-feature-card">
+            <img src="assets/images/solar_battery_storage.png" alt="Commercial Solar Energy Storage Battery Unit"
+              class="why-feature-img">
+            <div class="why-feature-overlay">
+              <span>Industrial Solar Battery Energy Storage (BESS)</span>
+              <i class="fa-solid fa-battery-full blue-text"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. CONSTRUCTION & SOLAR SERVICES (ZIG-ZAG)
+       ========================================================================== -->
+  <section class="services-zigzag-section" id="services-construction-solar">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="gold-badge"><i class="fa-solid fa-screwdriver-wrench"></i> Engineering Solutions</div>
+        <h2 class="section-title">Construction <span class="blue-text">& Solar Services</span></h2>
+        <p class="section-desc">Turnkey civil construction, structural steel fabrication, and high-yield commercial
+          solar energy.</p>
+      </div>
+
+      <!-- Top Half (Construction) -->
+      <div class="zigzag-row">
+        <div>
+          <div class="gold-badge"><i class="fa-solid fa-building"></i> Sector 01</div>
+          <h3 style="font-size: 2rem; margin: 0.5rem 0 1rem 0;">Civil Construction & <span class="blue-text">Structural
+              Steel</span></h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            ROYAL KINSTECH LIMITED COMPANY constructs high-specification commercial buildings, structural steel framing,
+            and civil infrastructure. From site works to urban green tower frameworks, our engineering teams ensure
+            lasting structural integrity.
+          </p>
+
+          <div class="service-bullet-grid">
+            <div class="service-bullet"><i class="fa-solid fa-check"></i> Urban Green Skyscrapers</div>
+            <div class="service-bullet"><i class="fa-solid fa-check"></i> Heavy Steel Frameworks</div>
+            <div class="service-bullet"><i class="fa-solid fa-check"></i> Eco-Friendly Building Design</div>
+            <div class="service-bullet"><i class="fa-solid fa-check"></i> Earthworks & Foundations</div>
+          </div>
+        </div>
+
+        <div class="zigzag-visual-grid">
+          <div class="zigzag-img-box tall">
+            <img src="assets/images/solar_construction.png" alt="Active Construction Site with Steel Framework"
+              class="zigzag-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Half (Solar Services - Photorealistic Asset Integration) -->
+      <div class="zigzag-row" style="margin-bottom: 0;">
+        <div class="zigzag-visual-grid">
+          <div class="zigzag-img-box tall">
+            <img src="assets/images/solar_array_crystalline.png"
+              alt="Commercial Crystalline Photovoltaic Array Installation" class="zigzag-img">
+          </div>
+        </div>
+
+        <div>
+          <div class="gold-badge"><i class="fa-solid fa-solar-panel"></i> Sector 02</div>
+          <h3 style="font-size: 2rem; margin: 0.5rem 0 1rem 0;">Commercial Solar <span class="blue-text">& Clean
+              Energy</span></h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            We design, engineer, and deploy high-yield commercial solar photovoltaic (PV) arrays and industrial battery
+            energy storage systems (BESS). Drastically cut grid electricity expenses and maintain continuous power
+            reliability.
+          </p>
+
+          <div class="service-bullet-grid">
+            <div class="service-bullet"><i class="fa-solid fa-sun"></i> Crystalline PV Arrays</div>
+            <div class="service-bullet"><i class="fa-solid fa-battery-full"></i> Industrial BESS Storage</div>
+            <div class="service-bullet"><i class="fa-solid fa-charging-station"></i> Off-Grid & Microgrid Power</div>
+            <div class="service-bullet"><i class="fa-solid fa-chart-line"></i> Energy Efficiency Audits</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. REAL ESTATE SERVICES SECTION
+       ========================================================================== -->
+  <section class="realestate-section" id="real-estate">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="gold-badge"><i class="fa-solid fa-city"></i> Property & Assets</div>
+        <h2 class="section-title">Real Estate <span class="blue-text">Services</span></h2>
+        <p class="section-desc">Pioneering development across masterplanned residential estates and urban green towers.
+        </p>
+      </div>
+
+      <!-- 3 Interactive Feature Cards -->
+      <div class="re-cards-grid">
+
+        <div class="re-card">
+          <div class="re-card-icon"><i class="fa-solid fa-key"></i></div>
+          <h3>Property Management</h3>
+          <p>Full-service property oversight, tenant administration, routine maintenance, and asset value optimization
+            for commercial and residential developments.</p>
+        </div>
+
+        <div class="re-card">
+          <div class="re-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <h3>Real Estate Consulting</h3>
+          <p>Feasibility studies, land acquisition advisory, municipal zoning approval, and joint venture structures
+            tailored to Ghana's real estate market.</p>
+        </div>
+
+        <div class="re-card">
+          <div class="re-card-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+          <h3>Property Development</h3>
+          <p>Ground-up development of masterplanned housing communities, luxury residential towers, and central business
+            district green commercial complexes.</p>
+        </div>
+
+      </div>
+
+      <!-- Imagery Showcase -->
+      <div class="re-showcase-grid">
+
+        <div class="re-showcase-item">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+            alt="Urban Green Skyscraper Towers" class="re-showcase-img">
+          <div class="re-showcase-caption">Urban Green Skyscraper Towers</div>
+        </div>
+
+        <div class="re-showcase-item">
+          <img src="assets/images/daylight_preurban_estate.png" alt="Pre-Urban Masterplanned Housing Layout"
+            class="re-showcase-img">
+          <div class="re-showcase-caption">Masterplanned Suburban Estates</div>
+        </div>
+
+        <div class="re-showcase-item">
+          <img src="assets/images/real_estate_luxury.png" alt="Contemporary Mixed-Use Commercial Development"
+            class="re-showcase-img">
+          <div class="re-showcase-caption">Contemporary Commercial Complex</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. IT EQUIPMENT & TECHNOLOGY SOLUTIONS SECTION
+       ========================================================================== -->
+  <section class="it-section" id="it-tech">
+    <div class="container">
+      <div class="it-grid">
+
+        <!-- Left Column: Services List -->
+        <div>
+          <div class="gold-badge"><i class="fa-solid fa-network-wired"></i> Enterprise Technology</div>
+          <h2 class="about-heading" style="margin-top: 0.5rem;">IT Equipment & <span class="blue-text">Tech
+              Solutions</span></h2>
+          <p style="color: var(--text-secondary); margin-top: 1rem;">
+            Empowering modern enterprises with server hardware, structured fiber optic cabling, data center racks, and
+            24/7 technical support.
+          </p>
+
+          <div class="it-services-list">
+
+            <div class="it-service-box">
+              <div class="it-box-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="it-box-info">
+                <h4>IT Hardware Procurement</h4>
+                <p>Direct supply of enterprise servers, laptops, networking switches, and high-performance workstations.
+                </p>
+              </div>
+            </div>
+
+            <div class="it-service-box">
+              <div class="it-box-icon"><i class="fa-solid fa-server"></i></div>
+              <div class="it-box-info">
+                <h4>Data Center Infrastructure</h4>
+                <p>Data center rack deployments, structured fiber cabling, server setup, and power redundancy.</p>
+              </div>
+            </div>
+
+            <div class="it-service-box">
+              <div class="it-box-icon"><i class="fa-solid fa-headset"></i></div>
+              <div class="it-box-info">
+                <h4>Managed Technical Services</h4>
+                <p>24/7 network security monitoring, cloud integration, preventative maintenance, and IT support.</p>
+              </div>
+            </div>
+
+            <div class="it-service-box">
+              <div class="it-box-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+              <div class="it-box-info">
+                <h4>Smart Building Integration</h4>
+                <p>Custom technology integration for smart commercial buildings and modern corporate workspaces.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Data Center Visual -->
+        <div>
+          <div class="collage-container">
+            <img src="assets/images/it_datacenter.png" alt="High Tech Server Room & Networking Infrastructure"
+              class="collage-img" style="height: 380px;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. BUILDING MATERIALS & GENERAL GOODS SECTION
+       ========================================================================== -->
+  <section class="materials-section" id="materials-goods">
+    <div class="container">
+
+      <!-- CENTERED LOGO AT MATERIALS SECTION -->
+      <div class="materials-centered-brand">
+        <img src="assets/images/royal_kinstech_logo.png" alt="Royal Kinstech Limited Official Logo"
+          class="materials-logo-img">
+        <div class="gold-badge"><i class="fa-solid fa-boxes-stacked"></i> Supply Chain Excellence</div>
+      </div>
+
+      <div class="section-title-wrap" style="margin-bottom: 3rem;">
+        <h2 class="section-title">Building Materials <span class="blue-text">& General Goods</span></h2>
+        <p class="section-desc">Reliable supply and logistics of certified structural inputs and commercial merchandise.
+        </p>
+      </div>
+
+      <div class="mat-grid">
+
+        <!-- Left Column: Building Materials 🧱 -->
+        <div class="mat-col">
+          <div class="mat-header">
+            <span class="mat-header-icon">🧱</span>
+            <div>
+              <h3>Building Materials</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Certified Structural Inputs</p>
+            </div>
+          </div>
+
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Bulk supply and nationwide logistical distribution of certified construction inputs for developers and civil
+            contractors.
+          </p>
+
+          <div class="mat-item-list">
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> High-Grade Iron Rods</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Bulk Cement Supply</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Steel Roofing Sheets</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Central Warehouse Depot</div>
+          </div>
+
+          <div class="mat-img-container">
+            <img src="assets/images/materials_depot.png" alt="Industrial Building Materials Warehouse Depot"
+              class="mat-img">
+          </div>
+        </div>
+
+        <!-- Right Column: General Goods 📦 -->
+        <div class="mat-col">
+          <div class="mat-header">
+            <span class="mat-header-icon">📦</span>
+            <div>
+              <h3>General Goods</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Commercial Merchandise</p>
+            </div>
+          </div>
+
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Distribution of office equipment, commercial appliances, and industrial tooling for institutions and
+            enterprises.
+          </p>
+
+          <div class="mat-item-list">
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Office Equipment & Supplies</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Commercial Appliances</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Industrial Tooling</div>
+            <div class="mat-item-badge"><i class="fa-solid fa-check blue-text"></i> Kitchen & Institutional Systems
+            </div>
+          </div>
+
+          <div class="mat-img-container">
+            <img src="assets/images/materials_depot.png" alt="Commercial General Goods Distribution Depot"
+              class="mat-img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. NEWS & EVENTS BLOG SECTION
+       ========================================================================== -->
+  <section class="news-events-section" id="news-events">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="gold-badge"><i class="fa-solid fa-newspaper"></i> Corporate Updates & Press Releases</div>
+        <h2 class="section-title">News <span class="blue-text">& Events</span></h2>
+        <p class="section-desc">Stay informed on our latest engineering breakthroughs, clean energy grid expansions, and
+          corporate highlights.</p>
+      </div>
+
+      <div class="news-grid">
+        <!-- News Card 1 -->
+        <article class="news-card">
+          <div class="news-img-box">
+            <img src="assets/images/solar_array_crystalline.png" alt="Royal Kinstech Commercial Solar Project"
+              class="news-img">
+            <span class="news-category-badge">Solar & Clean Energy</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span><i class="fa-regular fa-calendar-days"></i> August 15, 2026</span>
+              <span><i class="fa-solid fa-location-dot"></i> Greater Accra</span>
+            </div>
+            <h3 class="news-title">Royal Kinstech Launches Next-Gen Industrial Solar & BESS Storage Arrays</h3>
+            <p class="news-excerpt">
+              Royal Kinstech Limited Company has commissioned a high-yield photovoltaic solar system integrated with
+              industrial battery storage (BESS) for commercial facilities across Accra.
+            </p>
+            <a href="#contact" class="news-read-btn">Read Press Release <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- News Card 2 -->
+        <article class="news-card">
+          <div class="news-img-box">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+              alt="Urban Green Skyscraper Project" class="news-img">
+            <span class="news-category-badge">Green Architecture</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span><i class="fa-regular fa-calendar-days"></i> July 28, 2026</span>
+              <span><i class="fa-solid fa-location-dot"></i> Ablekuma, Accra</span>
+            </div>
+            <h3 class="news-title">Pioneering Sustainable Urban Green Tower Architecture in West Africa</h3>
+            <p class="news-excerpt">
+              Combining vertical green spaces, structural steel frameworks, and energy-efficient building automation to
+              redefine urban skyline developments.
+            </p>
+            <a href="#contact" class="news-read-btn">Read Press Release <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- News Card 3 -->
+        <article class="news-card">
+          <div class="news-img-box">
+            <img src="assets/images/materials_depot.png" alt="Building Materials Distribution Network" class="news-img">
+            <span class="news-category-badge">Supply Chain</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span><i class="fa-regular fa-calendar-days"></i> June 10, 2026</span>
+              <span><i class="fa-solid fa-location-dot"></i> Odorkor, Accra</span>
+            </div>
+            <h3 class="news-title">Expanding Bulk Building Materials & High-Grade Steel Depot Networks</h3>
+            <p class="news-excerpt">
+              Scaling our centralized distribution hubs to supply certified iron rods, roofing sheets, and structural
+              steel directly to construction contractors nationwide.
+            </p>
+            <a href="#contact" class="news-read-btn">Read Press Release <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. CONTACT US & FOOTPRINT SECTION (REFACTORED WITH EXACT DETAILS)
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+
+      <!-- Top Center: Logo ON TOP of Motto -->
+      <div class="contact-brand-header">
+        <img src="assets/images/royal_kinstech_logo.png" alt="Royal Kinstech Limited Official Logo"
+          class="contact-logo">
+        <p class="contact-motto-badge">“Your Best Interest”</p>
+        <h2 class="section-title">Contact Us <span class="blue-text">& Footprint</span></h2>
+      </div>
+
+      <!-- Contact Details Cards Grid (Exact Values Enforced) -->
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-building-user"></i></div>
+          <h4>Company Name & Location</h4>
+          <p>
+            <strong>ROYAL KINSTECH LIMITED COMPANY</strong><br>
+            Business Location: Ablekuma, Accra
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h4>Addresses</h4>
+          <p>
+            Digital Address: <strong>GC-192-0746</strong><br>
+            Postal Address: <strong>P.O Box 169, Odorkor, Accra</strong>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <h4>Phone Numbers</h4>
+          <p>
+            <a href="tel:0542842128" style="color: var(--c-gold); font-weight:700;">0542842128</a> /
+            <a href="tel:0276002207" style="color: var(--c-gold); font-weight:700;">0276002207</a><br>
+            Available Mon - Sat (8am - 6pm)
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h4>Email & Coordinates</h4>
+          <p>
+            <a href="mailto:royalkinstechlimited@gmail.com"
+              style="color: var(--c-gold); font-weight:700;">royalkinstechlimited@gmail.com</a><br>
+            Coordinates: 5°36'14.2"N 0°20'28.2"W
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Map Module & Office Headquarters Details Card -->
+      <div class="contact-bottom-grid">
+
+        <!-- Updated Interactive Map & Google Map Embed -->
+        <div class="map-card-wrapper">
+          <iframe src="https://maps.google.com/maps?q=5.603944,-0.341167&hl=en&z=16&output=embed" width="100%"
+            height="100%" style="border:0; min-height: 350px; border-radius: 14px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="ROYAL KINSTECH LIMITED – Ablekuma Headquarters">
+          </iframe>
+          <div id="map-element" style="display:none;"></div>
+        </div>
+
+        <!-- Building Title Card -->
+        <div class="office-preview-card">
+          <div class="office-preview-img-box">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+              alt="ROYAL KINSTECH LIMITED – Ablekuma Headquarters">
+          </div>
+          <div class="office-preview-details">
+            <div class="gold-badge" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-building"></i> Headquarters
+            </div>
+            <h4 class="blue-text">ROYAL KINSTECH LIMITED COMPANY – Ablekuma </h4>
+            <p>Digital Address: GC-192-0746 | Ablekuma, Accra, Ghana</p>
+            <p style="margin-top: 0.4rem; color: var(--text-secondary);">Phone: 0542842128 / 0276002207</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services-construction-solar">Services</a>
+        <a href="#real-estate">Real Estate</a>
+        <a href="#it-tech">IT & Tech</a>
+        <a href="#news-events">News & Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>&copy; 2026 ROYAL KINSTECH LIMITED COMPANY. All Rights Reserved. “Your Best Interest”</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Main Application JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
